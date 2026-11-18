@@ -109,54 +109,321 @@
 </div>
 
 <script>
-/* ===== Inhalte: neueste Rankings oben ===== */
+/* ===== Inhalte: werden von baue_seite.py aus den Themen-Dateien erzeugt ===== */
 const TAG = "platz1tech-21";
-const RANKINGS = [
-  {
-    id: "tech-geschenke", nr: 1, neu: true,
-    titel: "5 Tech-Geschenke, die wirklich benutzt werden",
-    chip: "Tech-Geschenke",
-    plaetze: [
-      {p:1, name:"Kopfhörer mit Geräuschunterdrückung", why:"Zug, Büro, Großraum: aufsetzen, und es ist Ruhe.",
-       tip:"Auf aktive Geräuschunterdrückung (ANC) und mindestens 20 Stunden Akkulaufzeit achten.",
-       suche:"Noise Cancelling Kopfhörer Bluetooth"},
-      {p:2, name:"Mini-Beamer", why:"Kinoabend an der Wand, ganz ohne Fernseher.",
-       tip:"Auf die echte (native) Auflösung achten, am besten 1080p. „Unterstützt 4K“ heißt oft nur, dass 4K-Signale angenommen werden.",
-       suche:"Mini Beamer 1080p nativ"},
-      {p:3, name:"Smartwatch", why:"Nachrichten, Schritte und Puls direkt am Handgelenk.",
-       tip:"Zum Handy passend wählen: Die Apple Watch funktioniert nur mit dem iPhone. Wer nicht jeden Tag laden will, achtet auf mehrere Tage Akkulaufzeit.",
-       suche:"Smartwatch Fitness Tracker"},
-      {p:4, name:"Kompakte Powerbank", why:"Passt in die Jackentasche und rettet den Tag.",
-       tip:"10.000 mAh reichen für ein bis zwei Handyladungen. Mit USB-C Power Delivery lädt sie schneller.",
-       suche:"Powerbank 10000mAh USB-C Power Delivery"},
-      {p:5, name:"Smarte LED-Streifen", why:"Per App in jeder Farbe, macht jedes Zimmer gemütlicher.",
-       tip:"Länge vorher ausmessen. Mit App- oder Sprachsteuerung (Alexa, Google) ist es am bequemsten.",
-       suche:"LED Streifen App Alexa"}
-    ]
-  },
-  {
-    id: "schreibtisch-setup", nr: 2,
-    titel: "5 Schreibtisch-Gadgets für ein besseres Setup",
-    chip: "Schreibtisch-Setup",
-    plaetze: [
-      {p:1, name:"Laptop-Ständer", why:"Bringt den Bildschirm auf Augenhöhe. Der Nacken dankt es dir.",
-       tip:"Höhenverstellbar und aus Aluminium. Dazu brauchst du eine externe Tastatur und Maus.",
-       suche:"Laptop Ständer höhenverstellbar Aluminium"},
-      {p:2, name:"Monitor-Lichtleiste", why:"Leuchtet den Tisch aus, ohne auf dem Bildschirm zu spiegeln.",
-       tip:"Passt auf die meisten Monitore. Bei gewölbten Bildschirmen die Halterung prüfen.",
-       suche:"Monitor Lichtleiste"},
-      {p:3, name:"USB-C-Ladestation", why:"Ein Stecker für Handy, Kopfhörer und Laptop.",
-       tip:"Die Gesamtleistung muss für den Laptop reichen, meist ab 65 W. GaN-Ladegeräte sind deutlich kleiner.",
-       suche:"USB C Ladegerät GaN 65W mehrere Anschlüsse"},
-      {p:4, name:"XXL-Mauspad", why:"Eine Matte für Maus und Tastatur. Ruhiger Look, geschonter Tisch.",
-       tip:"Mindestens 80 × 30 cm, damit Tastatur und Maus draufpassen. Genähte Ränder halten länger.",
-       suche:"XXL Mauspad Schreibtischunterlage"},
-      {p:5, name:"Kabel-Organizer", why:"In fünf Minuten ist der Kabelsalat weg.",
-       tip:"Selbstklebende Clips für die Tischkante, eine Kabelwanne für unter den Tisch.",
-       suche:"Kabelmanagement Schreibtisch Kabelwanne"}
-    ]
-  }
+/* RANKINGS-START */
+const ALLE = [
+ {
+  "id": "tech-geschenke",
+  "titel": "5 Tech-Geschenke, die wirklich benutzt werden",
+  "chip": "Tech-Geschenke",
+  "termin": "2026-11-18T17:30",
+  "plaetze": [
+   {
+    "p": 5,
+    "name": "Smarte LED-Streifen",
+    "why": "Per App in jeder Farbe. Macht jedes Zimmer sofort gemütlicher.",
+    "tip": "Länge vorher ausmessen. Mit App- oder Sprachsteuerung (Alexa, Google) ist es am bequemsten.",
+    "suche": "LED Streifen App Alexa"
+   },
+   {
+    "p": 4,
+    "name": "Kompakte Powerbank",
+    "why": "Passt in die Jackentasche und rettet jeden Tag mit leerem Handy.",
+    "tip": "10.000 mAh reichen für ein bis zwei Handyladungen. Mit USB-C Power Delivery lädt sie schneller.",
+    "suche": "Powerbank 10000mAh USB-C Power Delivery"
+   },
+   {
+    "p": 3,
+    "name": "Smartwatch",
+    "why": "Nachrichten, Schritte und Puls direkt am Handgelenk.",
+    "tip": "Zum Handy passend wählen: Die Apple Watch funktioniert nur mit dem iPhone. Wer nicht jeden Tag laden will, achtet auf mehrere Tage Akkulaufzeit.",
+    "suche": "Smartwatch Fitness Tracker"
+   },
+   {
+    "p": 2,
+    "name": "Mini-Beamer",
+    "why": "Kinoabend an der Schlafzimmerwand, ganz ohne Fernseher.",
+    "tip": "Auf die echte (native) Auflösung achten, am besten 1080p. „Unterstützt 4K“ heißt oft nur, dass 4K-Signale angenommen werden.",
+    "suche": "Mini Beamer 1080p nativ"
+   },
+   {
+    "p": 1,
+    "name": "Kopfhörer mit Geräuschunterdrückung",
+    "why": "Zug, Büro, Großraum: einmal aufsetzen, und es ist Ruhe.",
+    "tip": "Auf aktive Geräuschunterdrückung (ANC) und mindestens 20 Stunden Akkulaufzeit achten.",
+    "suche": "Noise Cancelling Kopfhörer Bluetooth"
+   }
+  ]
+ },
+ {
+  "id": "schreibtisch-setup",
+  "titel": "5 Schreibtisch-Gadgets für ein besseres Setup",
+  "chip": "Schreibtisch-Setup",
+  "termin": "2026-11-19T17:30",
+  "plaetze": [
+   {
+    "p": 5,
+    "name": "Kabel-Organizer",
+    "why": "Klebe-Clips an die Tischkante, und der Kabelsalat ist in fünf Minuten weg.",
+    "tip": "Selbstklebende Clips für die Tischkante, eine Kabelwanne für unter den Tisch.",
+    "suche": "Kabelmanagement Schreibtisch Kabelwanne"
+   },
+   {
+    "p": 4,
+    "name": "Großes Schreibtisch-Mauspad",
+    "why": "Eine Matte für Maus und Tastatur. Sieht ruhiger aus und schont den Tisch.",
+    "tip": "Mindestens 80 × 30 cm, damit Tastatur und Maus draufpassen. Genähte Ränder halten länger.",
+    "suche": "XXL Mauspad Schreibtischunterlage"
+   },
+   {
+    "p": 3,
+    "name": "USB-C-Ladestation",
+    "why": "Ein Stecker für Handy, Kopfhörer und Laptop gleichzeitig.",
+    "tip": "Die Gesamtleistung muss für den Laptop reichen, meist ab 65 W. GaN-Ladegeräte sind deutlich kleiner.",
+    "suche": "USB C Ladegerät GaN 65W mehrere Anschlüsse"
+   },
+   {
+    "p": 2,
+    "name": "Monitor-Lichtleiste",
+    "why": "Sitzt auf dem Bildschirm und leuchtet den Tisch aus, ohne zu spiegeln.",
+    "tip": "Passt auf die meisten Monitore. Bei gewölbten Bildschirmen die Halterung prüfen.",
+    "suche": "Monitor Lichtleiste"
+   },
+   {
+    "p": 1,
+    "name": "Laptop-Ständer",
+    "why": "Bringt den Bildschirm auf Augenhöhe. Dein Nacken wird es dir danken.",
+    "tip": "Höhenverstellbar und aus Aluminium. Dazu brauchst du eine externe Tastatur und Maus.",
+    "suche": "Laptop Ständer höhenverstellbar Aluminium"
+   }
+  ]
+ },
+ {
+  "id": "kueche",
+  "titel": "5 Küchen-Gadgets, die dir Zeit sparen",
+  "chip": "Küche",
+  "termin": "2026-11-20T17:30",
+  "plaetze": [
+   {
+    "p": 5,
+    "name": "Digitale Küchenwaage",
+    "why": "Grammgenau abwiegen, direkt in der Schüssel.",
+    "tip": "Wichtig sind eine Tara-Taste und eine Genauigkeit von 1 Gramm. Zum Backen reicht das völlig.",
+    "suche": "digitale Küchenwaage"
+   },
+   {
+    "p": 4,
+    "name": "Milchaufschäumer",
+    "why": "Cremiger Milchschaum wie im Café, ohne teure Maschine.",
+    "tip": "Elektrische Kannen schäumen warm und kalt. Handstäbe sind günstiger, schäumen aber nur auf.",
+    "suche": "elektrischer Milchaufschäumer"
+   },
+   {
+    "p": 3,
+    "name": "Stabmixer",
+    "why": "Suppen, Smoothies und Saucen direkt im Topf pürieren.",
+    "tip": "Ein Mixfuß aus Edelstahl verträgt heiße Suppen. Zubehör wie ein Zerkleinerer spart weitere Geräte.",
+    "suche": "Stabmixer Edelstahl Set"
+   },
+   {
+    "p": 2,
+    "name": "Digitales Fleischthermometer",
+    "why": "Schluss mit Raten: Steak und Braten werden auf den Punkt.",
+    "tip": "Modelle mit Funk-Fühler zeigen die Temperatur am Handy, auch bei geschlossenem Ofen.",
+    "suche": "digitales Fleischthermometer"
+   },
+   {
+    "p": 1,
+    "name": "Heißluftfritteuse",
+    "why": "Pommes und Gemüse werden knusprig, fast ganz ohne Öl.",
+    "tip": "Für zwei Personen reichen etwa 4 Liter. Mit zwei Körben machst du zwei Gerichte gleichzeitig.",
+    "suche": "Heißluftfritteuse"
+   }
+  ]
+ },
+ {
+  "id": "gaming",
+  "titel": "5 Gaming-Upgrades, die du sofort merkst",
+  "chip": "Gaming",
+  "termin": "2026-11-21T11:30",
+  "plaetze": [
+   {
+    "p": 5,
+    "name": "Controller-Ladestation",
+    "why": "Nie wieder ein leerer Controller, wenn es gerade spannend wird.",
+    "tip": "Passend zur Konsole kaufen: PlayStation- und Xbox-Controller brauchen unterschiedliche Stationen.",
+    "suche": "Controller Ladestation"
+   },
+   {
+    "p": 4,
+    "name": "Gaming-Headset",
+    "why": "Schritte hören, bevor du sie siehst, und dein Team versteht dich klar.",
+    "tip": "Auf ein gutes Mikrofon und bequeme Polster achten. Kabellos am besten mit 2,4-GHz-Funk statt nur Bluetooth, wegen geringerer Verzögerung.",
+    "suche": "Gaming Headset"
+   },
+   {
+    "p": 3,
+    "name": "Mechanische Tastatur",
+    "why": "Präzise Anschläge, langlebig, und jeder Tastendruck fühlt sich gut an.",
+    "tip": "Schalterart wählen: Lineare Schalter sind leise und schnell, taktile geben spürbares Feedback.",
+    "suche": "mechanische Gaming Tastatur"
+   },
+   {
+    "p": 2,
+    "name": "Gaming-Maus",
+    "why": "Leicht, schnell und genau. Deine Treffer werden sauberer.",
+    "tip": "Gewicht und Form müssen zu deiner Hand passen. Ein guter Sensor ist heute fast überall Standard.",
+    "suche": "Gaming Maus leicht"
+   },
+   {
+    "p": 1,
+    "name": "Monitor mit 144 Hertz",
+    "why": "Jedes Spiel läuft flüssiger. Wer einmal wechselt, will nicht mehr zurück.",
+    "tip": "Mehr Hertz bringen nur etwas, wenn PC oder Konsole genug Bilder liefern. Aktuelle Konsolen schaffen meist bis 120 Hz.",
+    "suche": "Gaming Monitor 144Hz"
+   }
+  ]
+ },
+ {
+  "id": "smart-home",
+  "titel": "5 Smart-Home-Gadgets für Einsteiger",
+  "chip": "Smart Home",
+  "termin": "2026-11-22T11:30",
+  "plaetze": [
+   {
+    "p": 5,
+    "name": "Smarte Steckdose",
+    "why": "Macht jedes Gerät per App oder Sprache steuerbar. Ideal für Lampen.",
+    "tip": "Auf die maximale Last achten und darauf, ob sie mit Alexa, Google oder Apple Home funktioniert.",
+    "suche": "smarte Steckdose WLAN Alexa"
+   },
+   {
+    "p": 4,
+    "name": "Smarte Glühbirne",
+    "why": "Helligkeit und Farbe per App, abends automatisch gedimmt.",
+    "tip": "Gewinde prüfen (E27 oder E14). Modelle mit WLAN brauchen keine zusätzliche Zentrale (Bridge).",
+    "suche": "smarte Glühbirne E27 WLAN"
+   },
+   {
+    "p": 3,
+    "name": "Smarter Lautsprecher",
+    "why": "Musik, Wetter, Timer, und er steuert die anderen Geräte per Stimme.",
+    "tip": "Zuerst das System festlegen: Alexa, Google oder Apple. Danach alle Geräte passend dazu kaufen.",
+    "suche": "smarter Lautsprecher Sprachassistent"
+   },
+   {
+    "p": 2,
+    "name": "Video-Türklingel",
+    "why": "Du siehst am Handy, wer vor der Tür steht, auch unterwegs.",
+    "tip": "Klären, ob Akku oder Kabel. Die Kamera darf nur deinen eigenen Bereich erfassen, in Mehrparteienhäusern vorher die Hausverwaltung fragen.",
+    "suche": "Video Türklingel WLAN"
+   },
+   {
+    "p": 1,
+    "name": "Saugroboter",
+    "why": "Saugt, während du unterwegs bist. Am Abend ist der Boden sauber.",
+    "tip": "Mit Laser-Navigation (LiDAR) fährt er gezielt statt zufällig. Eine Absaugstation spart das tägliche Leeren.",
+    "suche": "Saugroboter Laser Navigation"
+   }
+  ]
+ },
+ {
+  "id": "handy-zubehoer",
+  "titel": "5 Handy-Gadgets, die sich wirklich lohnen",
+  "chip": "Handy-Zubehör",
+  "termin": "2026-11-23T17:30",
+  "plaetze": [
+   {
+    "p": 5,
+    "name": "Displayschutz aus Panzerglas",
+    "why": "Ein Sturz, und nur das Schutzglas ist kaputt statt des Displays.",
+    "tip": "Genau für dein Handymodell kaufen. Sets mit Anbringrahmen machen es blasenfrei.",
+    "suche": "Panzerglas Displayschutz"
+   },
+   {
+    "p": 4,
+    "name": "Robuste Handyhülle",
+    "why": "Schützt Ecken und Kamera, die häufigsten Bruchstellen.",
+    "tip": "Ein erhöhter Rand um Kamera und Display schützt beim Ablegen auf dem Tisch.",
+    "suche": "Handyhülle stoßfest"
+   },
+   {
+    "p": 3,
+    "name": "Kabelloses Ladegerät",
+    "why": "Handy drauflegen, fertig. Kein Kabelsuchen mehr am Nachttisch.",
+    "tip": "Prüfen, ob dein Handy kabelloses Laden (Qi) unterstützt. Die meisten neueren Modelle können es.",
+    "suche": "kabelloses Ladegerät Qi"
+   },
+   {
+    "p": 2,
+    "name": "Handy-Stativ",
+    "why": "Für Fotos, Videos und Videocalls ohne wackelnde Hand.",
+    "tip": "Mit Bluetooth-Fernauslöser machst du Gruppenfotos, auf denen niemand fehlt.",
+    "suche": "Handy Stativ Fernauslöser"
+   },
+   {
+    "p": 1,
+    "name": "Handy-Gimbal",
+    "why": "Stabilisiert jede Bewegung. Deine Videos sehen aus wie vom Profi.",
+    "tip": "Auf das maximale Gewicht achten: Große Handys mit Hülle sind schwerer, als man denkt.",
+    "suche": "Smartphone Gimbal"
+   }
+  ]
+ },
+ {
+  "id": "haustiere",
+  "titel": "5 Tech-Gadgets für Haustier-Besitzer",
+  "chip": "Haustiere",
+  "termin": "2026-11-24T17:30",
+  "plaetze": [
+   {
+    "p": 5,
+    "name": "Automatisches Laserspielzeug",
+    "why": "Beschäftigt die Katze, auch wenn du gerade keine Zeit hast.",
+    "tip": "Nie in die Augen leuchten lassen. Nach dem Spiel ein echtes Spielzeug zum Fangen geben, das beugt Frust vor.",
+    "suche": "automatisches Katzenspielzeug Laser"
+   },
+   {
+    "p": 4,
+    "name": "Trinkbrunnen",
+    "why": "Fließendes Wasser regt viele Katzen zum Trinken an.",
+    "tip": "Eine leise Pumpe und leicht zu reinigende Teile sind wichtiger als viele Extras.",
+    "suche": "Katzen Trinkbrunnen leise"
+   },
+   {
+    "p": 3,
+    "name": "Futterautomat",
+    "why": "Füttert pünktlich, auch wenn du länger arbeitest.",
+    "tip": "Auf Zeitplan und feste Portionen achten. Für Nassfutter gibt es gekühlte Modelle.",
+    "suche": "Futterautomat Katze Hund"
+   },
+   {
+    "p": 2,
+    "name": "Akku-Handstaubsauger",
+    "why": "Tierhaare vom Sofa sind in Sekunden weg.",
+    "tip": "Eine Tierhaar-Bürste mit Gummilamellen holt Haare deutlich besser aus Polstern.",
+    "suche": "Akku Handstaubsauger Tierhaare"
+   },
+   {
+    "p": 1,
+    "name": "Haustierkamera",
+    "why": "Am Handy sehen, was dein Liebling macht. Manche Modelle werfen sogar Leckerlis.",
+    "tip": "Mit Zwei-Wege-Audio kannst du mit deinem Tier sprechen. Auf Nachtsicht achten.",
+    "suche": "Haustierkamera Leckerli"
+   }
+  ]
+ }
 ];
+/* RANKINGS-ENDE */
+
+/* Nur bereits veroeffentlichte Rankings zeigen, das neueste oben */
+const jetzt = new Date();
+const RANKINGS = ALLE.filter(r => new Date(r.termin) <= jetzt)
+  .sort((a, b) => new Date(a.termin) - new Date(b.termin))
+  .map((r, i) => Object.assign({}, r, {nr: i + 1}))
+  .reverse();
+if (RANKINGS.length) RANKINGS[0].neu = true;
 
 /* ===== Aufbau der Seite ===== */
 const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
@@ -165,7 +432,7 @@ const link = q => "https://www.amazon.de/s?k=" + encodeURIComponent(q) + "&tag="
 document.getElementById("chips").innerHTML = RANKINGS.map(r =>
   `<a class="chip" href="#${r.id}">${esc(r.chip)}</a>`).join("");
 
-document.getElementById("rankings").innerHTML = RANKINGS.map(r => `
+document.getElementById("rankings").innerHTML = RANKINGS.length ? RANKINGS.map(r => `
   <section id="${r.id}">
     <div class="r-head">${r.neu ? '<span class="neu">Neu</span>' : ''}<span class="nr">Ranking #${r.nr}</span></div>
     <h2>${esc(r.titel)}</h2>
@@ -180,7 +447,7 @@ document.getElementById("rankings").innerHTML = RANKINGS.map(r => `
         <a class="btn" href="${link(x.suche)}" target="_blank" rel="sponsored nofollow noopener">Auf Amazon ansehen&nbsp;→</a>
       </li>`).join("")}
     </ol>
-  </section>`).join("");
+  </section>`).join("") : '<p class="claim" style="padding:40px 0;text-align:center">Das erste Ranking erscheint in Kürze.</p>';
 </script>
 </body>
 </html>
