@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Platz 1 Tech – Alle Rankings & Links</title>
+<meta name="description" content="Alle Produkte aus den Platz-1-Tech-Rankings auf einen Blick, mit Tipps, worauf du beim Kauf achten solltest.">
+<meta name="theme-color" content="#0B0D12">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%23FFC400'/%3E%3Ctext x='32' y='44' font-family='Arial Black,Arial' font-weight='900' font-size='32' text-anchor='middle' fill='%230B0D12'%3E%231%3C/text%3E%3C/svg%3E">
+<style>
+  :root{
+    --bg:#0B0D12; --surface:#141821; --surface-2:#1B2030; --line:#262C3B;
+    --text:#F2F4F8; --muted:#9AA3B2; --gold:#FFC400; --gold-soft:rgba(255,196,0,.12);
+    --silver:#C9D1DC; --bronze:#D9965A; --radius:18px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+  body{background:var(--bg);color:var(--text);
+    font:16px/1.5 -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    padding-bottom:env(safe-area-inset-bottom)}
+  a{color:inherit}
+  .wrap{max-width:560px;margin:0 auto;padding:0 18px}
+
+  /* Kopf */
+  header{padding:36px 0 22px;text-align:center}
+  .logo{width:68px;height:68px;border-radius:20px;background:var(--gold);color:var(--bg);
+    display:inline-grid;place-items:center;font:900 30px/1 "Arial Black",Arial,sans-serif;letter-spacing:-1px;
+    box-shadow:0 10px 30px rgba(255,196,0,.25)}
+  h1{font:900 30px/1.1 "Arial Black",Arial,sans-serif;letter-spacing:-.5px;margin-top:16px}
+  .claim{color:var(--muted);margin-top:6px}
+  .yt{display:inline-flex;align-items:center;gap:8px;margin-top:16px;padding:10px 16px;border-radius:999px;
+    background:var(--surface);border:1px solid var(--line);text-decoration:none;font-weight:600;font-size:15px}
+  .yt svg{width:18px;height:18px}
+  .yt:hover{border-color:var(--gold)}
+
+  /* Hinweis Werbung */
+  .notice{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:12px 14px;
+    font-size:13px;color:var(--muted);display:flex;gap:10px;align-items:flex-start}
+  .notice b{color:var(--text)}
+  .tag{flex:none;background:var(--surface-2);color:var(--text);font-size:11px;font-weight:700;letter-spacing:.06em;
+    text-transform:uppercase;padding:3px 7px;border-radius:6px;margin-top:1px}
+
+  /* Inhaltsverzeichnis */
+  nav{position:sticky;top:0;z-index:5;background:rgba(11,13,18,.88);backdrop-filter:blur(10px);
+    -webkit-backdrop-filter:blur(10px);margin:18px -18px 0;padding:12px 18px;border-bottom:1px solid var(--line)}
+  .chips{display:flex;gap:8px;overflow-x:auto;scrollbar-width:none}
+  .chips::-webkit-scrollbar{display:none}
+  .chip{flex:none;padding:8px 14px;border-radius:999px;background:var(--surface);border:1px solid var(--line);
+    font-size:14px;font-weight:600;text-decoration:none;white-space:nowrap}
+  .chip:hover,.chip:focus-visible{border-color:var(--gold);outline:none}
+
+  /* Ranking */
+  section{padding-top:30px;scroll-margin-top:64px}
+  .r-head{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .neu{background:var(--gold);color:var(--bg);font-size:11px;font-weight:800;letter-spacing:.08em;
+    text-transform:uppercase;padding:3px 8px;border-radius:6px}
+  .nr{color:var(--muted);font-size:13px;font-weight:600}
+  h2{font:900 23px/1.2 "Arial Black",Arial,sans-serif;margin-top:8px;letter-spacing:-.3px}
+  .list{list-style:none;margin-top:16px;display:grid;gap:12px}
+
+  .item{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px}
+  .item.p1{border-color:rgba(255,196,0,.55);background:linear-gradient(180deg,var(--gold-soft),var(--surface) 60%)}
+  .row{display:flex;gap:14px;align-items:flex-start}
+  .badge{flex:none;width:44px;height:44px;border-radius:12px;display:grid;place-items:center;
+    font:900 20px/1 "Arial Black",Arial,sans-serif;background:var(--surface-2);color:var(--text)}
+  .p1 .badge{background:var(--gold);color:var(--bg)}
+  .p2 .badge{background:var(--silver);color:var(--bg)}
+  .p3 .badge{background:var(--bronze);color:var(--bg)}
+  .name{font-weight:800;font-size:17px;line-height:1.3}
+  .why{color:var(--muted);font-size:15px;margin-top:2px}
+  .tip{margin-top:12px;padding:10px 12px;border-radius:12px;background:var(--bg);font-size:14px;color:#C8CED9}
+  .tip b{color:var(--gold);font-weight:700}
+  .btn{display:flex;justify-content:center;align-items:center;gap:8px;margin-top:12px;min-height:48px;
+    border-radius:12px;background:var(--text);color:var(--bg);font-weight:800;font-size:15px;text-decoration:none;
+    transition:transform .08s ease}
+  .p1 .btn{background:var(--gold)}
+  .btn:active{transform:scale(.98)}
+  .btn:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+
+  footer{margin-top:44px;padding:24px 0 40px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+  footer p+p{margin-top:8px}
+  footer a{color:var(--text)}
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.btn{transition:none}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="logo" aria-hidden="true">#1</div>
+    <h1>Platz 1 Tech</h1>
+    <p class="claim">Tech-Rankings. Ehrlich sortiert.</p>
+    <a class="yt" href="https://www.youtube.com/@platz1tech" target="_blank" rel="noopener">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="#FF0033" d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12 31 31 0 0 0 1 16.8a3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8Z"/><path fill="#fff" d="m9.75 15.02 5.75-3.02-5.75-3.02z"/></svg>
+      @platz1tech auf YouTube
+    </a>
+  </header>
+
+  <p class="notice"><span class="tag">Werbung</span>
+    <span><b>Die Links auf dieser Seite sind Amazon-Partnerlinks.</b> Als Amazon-Partner verdiene ich an qualifizierten Verkäufen. Für dich ändert sich am Preis nichts.</span></p>
+
+  <nav aria-label="Rankings"><div class="chips" id="chips"></div></nav>
+  <main id="rankings"></main>
+
+  <footer>
+    <p>Preise und Verfügbarkeit ändern sich laufend. Maßgeblich ist immer die Angabe bei Amazon zum Zeitpunkt des Kaufs.</p>
+    <p>Diese Seite setzt keine Cookies und lädt keine externen Skripte oder Schriften.</p>
+    <p><a href="impressum.html">Impressum &amp; Offenlegung</a></p>
+  </footer>
+</div>
+
+<script>
+/* ===== Inhalte: werden von baue_seite.py aus den Themen-Dateien erzeugt ===== */
+const TAG = "platz1tech-21";
+/* RANKINGS-START */
+const ALLE = [
+ {
+  "id": "tech-geschenke",
+  "titel": "5 Tech-Geschenke, die wirklich benutzt werden",
+  "chip": "Tech-Geschenke",
+  "termin": "2026-11-18T17:30",
+  "plaetze": [
+   {
+    "p": 5,
+    "name": "Smarte LED-Streifen",
+    "why": "Per App in jeder Farbe. Macht jedes Zimmer sofort gemütlicher.",
+    "tip": "Länge vorher ausmessen. Mit App- oder Sprachsteuerung (Alexa, Google) ist es am bequemsten.",
+    "suche": "LED Streifen App Alexa"
+   },
+   {
+    "p": 4,
+    "name": "Kompakte Powerbank",
+    "why": "Passt in die Jackentasche und rettet jeden Tag mit leerem Handy.",
+    "tip": "10.000 mAh reichen für ein bis zwei Handyladungen. Mit USB-C Power Delivery lädt sie schneller.",
+    "suche": "Powerbank 10000mAh USB-C Power Delivery"
+   },
+   {
+    "p": 3,
+    "name": "Smartwatch",
+    "why": "Nachrichten, Schritte und Puls direkt am Handgelenk.",
+    "tip": "Zum Handy passend wählen: Die Apple Watch funktioniert nur mit dem iPhone. Wer nicht jeden Tag laden will, achtet auf mehrere Tage Akkulaufzeit.",
+    "suche": "Smartwatch Fitness Tracker"
+   },
+   {
+    "p": 2,
+    "name": "Mini-Beamer",
+    "why": "Kinoabend an der Schlafzimmerwand, ganz ohne Fernseher.",
+    "tip": "Auf die echte (native) Auflösung achten, am besten 1080p. „Unterstützt 4K“ heißt oft nur, dass 4K-Signale angenommen werden.",
+    "suche": "Mini Beamer 1080p nativ"
+   },
+   {
+    "p": 1,
+    "name": "Kopfhörer mit Geräuschunterdrückung",
+    "why": "Zug, Büro, Großraum: einmal aufsetzen, und es ist Ruhe.",
+    "tip": "Auf aktive Geräuschunterdrückung (ANC) und mindestens 20 Stunden Akkulaufzeit achten.",
+    "suche": "Noise Cancelling Kopfhörer Bluetooth"
+   }
+  ]
+ },
+ {
+  "id": "schreibtisch-setup",
+  "titel": "5 Schreibtisch-Gadgets für ein besseres Setup",
+  "chip": "Schreibtisch-Setup",
+  "termin": "2026-11-19T17:30",
+  "plaetze": [
+   {
+    "p": 5,
+    "name": "Kabel-Organizer",
+    "why": "Klebe-Clips an die Tischkante, und der Kabelsalat ist in fünf Minuten weg.",
+    "tip": "Selbstklebende Clips für die Tischkante, eine Kabelwanne für unter den Tisch.",
+    "suche": "Kabelmanagement Schreibtisch Kabelwanne"
+   },
+   {
+    "p": 4,
+    "name": "Großes Schreibtisch-Mauspad",
+    "why": "Eine Matte für Maus und Tastatur. Sieht ruhiger aus und schont den Tisch.",
+    "tip": "Mindestens 80 × 30 cm, damit Tastatur und Maus draufpassen. Genähte Ränder halten länger.",
+    "suche": "XXL Mauspad Schreibtischunterlage"
+   },
+   {
+    "p": 3,
+    "name": "USB-C-Ladestation",
+    "why": "Ein Stecker für Handy, Kopfhörer und Laptop gleichzeitig.",
+    "tip": "Die Gesamtleistung muss für den Laptop reichen, meist ab 65 W. GaN-Ladegeräte sind deutlich kleiner.",
+    "suche": "USB C Ladegerät GaN 65W mehrere Anschlüsse"
+   },
+   {
+    "p": 2,
+    "name": "Monitor-Lichtleiste",
+    "why": "Sitzt auf dem Bildschirm und leuchtet den Tisch aus, ohne zu spiegeln.",
+    "tip": "Passt auf die meisten Monitore. Bei gewölbten Bildschirmen die Halterung prüfen.",
+    "suche": "Monitor Lichtleiste"
+   },
+   {
+    "p": 1,
+    "name": "Laptop-Ständer",
+    "why": "Bringt den Bildschirm auf Augenhöhe. Dein Nacken wird es dir danken.",
+    "tip": "Höhenverstellbar und aus Aluminium. Dazu brauchst du eine externe Tastatur und Maus.",
+    "suche": "Laptop Ständer höhenverstellbar Aluminium"
+   }
+  ]
+ },
+ {
+  "id": "kueche",
+  "titel": "5 Küchen-Gadgets, die dir Zeit sparen",
+  "chip": "Küche",
+  "termin": "2026-11-20T17:30",
+  "plaetze": [
+   {
+    "p": 5,
+    "name": "Digitale Küchenwaage",
+    "why": "Grammgenau abwiegen, direkt in der Schüssel.",
+    "tip": "Wichtig sind eine Tara-Taste und eine Genauigkeit von 1 Gramm. Zum Backen reicht das völlig.",
+    "suche": "digitale Küchenwaage"
+   },
+   {
+    "p": 4,
+    "name": "Milchaufschäumer",
+    "why": "Cremiger Milchschaum wie im Café, ohne teure Maschine.",
+    "tip": "Elektrische Kannen schäumen warm und kalt. Handstäbe sind günstiger, schäumen aber nur auf.",
+    "suche": "elektrischer Milchaufschäumer"
+   },
+   {
+    "p": 3,
+    "name": "Stabmixer",
+    "why": "Suppen, Smoothies und Saucen direkt im Topf pürieren.",
+    "tip": "Ein Mixfuß aus Edelstahl verträgt heiße Suppen. Zubehör wie ein Zerkleinerer spart weitere Geräte.",
+    "suche": "Stabmixer Edelstahl Set"
+   },
+   {
+    "p": 2,
+    "name": "Digitales Fleischthermometer",
+    "why": "Schluss mit Raten: Steak und Braten werden auf den Punkt.",
+    "tip": "Modelle mit Funk-Fühler zeigen die Temperatur am Handy, auch bei geschlossenem Ofen.",
+    "suche": "digitales Fleischthermometer"
+   },
+   {
+    "p": 1,
+    "name": "Heißluftfritteuse",
+    "why": "Pommes und Gemüse werden knusprig, fast ganz ohne Öl.",
+    "tip": "Für zwei Personen reichen etwa 4 Liter. Mit zwei Körben machst du zwei Gerichte gleichzeitig.",
+    "suche": "Heißluftfritteuse"
+   }
+  ]
+ },
+ {
+  "id": "gaming",
+  "titel": "5 Gaming-Upgrades, die du sofort merkst",
+  "chip": "Gaming",
+  "termin": "2026-11-21T11:30",
+  "plaetze": [
+   {
+    "p": 5,
+    "name": "Controller-Ladestation",
+    "why": "Nie wieder ein leerer Controller, wenn es gerade spannend wird.",
+    "tip": "Passend zur Konsole kaufen: PlayStation- und Xbox-Controller brauchen unterschiedliche Stationen.",
+    "suche": "Controller Ladestation"
+   },
+   {
+    "p": 4,
+    "name": "Gaming-Headset",
+    "why": "Schritte hören, bevor du sie siehst, und dein Team versteht dich klar.",
+    "tip": "Auf ein gutes Mikrofon und bequeme Polster achten. Kabellos am besten mit 2,4-GHz-Funk statt nur Bluetooth, wegen geringerer Verzögerung.",
+    "suche": "Gaming Headset"
+   },
+   {
+    "p": 3,
+    "name": "Mechanische Tastatur",
+    "why": "Präzise Anschläge, langlebig, und jeder Tastendruck fühlt sich gut an.",
+    "tip": "Schalterart wählen: Lineare Schalter sind leise und schnell, taktile geben spürbares Feedback.",
+    "suche": "mechanische Gaming Tastatur"
+   },
+   {
+    "p": 2,
+    "name": "Gaming-Maus",
+    "why": "Leicht, schnell und genau. Deine Treffer werden sauberer.",
+    "tip": "Gewicht und Form müssen zu deiner Hand passen. Ein guter Sensor ist heute fast überall Standard.",
+    "suche": "Gaming Maus leicht"
+   },
+   {
+    "p": 1,
+    "name": "Monitor mit 144 Hertz",
+    "why": "Jedes Spiel läuft flüssiger. Wer einmal wechselt, will nicht mehr zurück.",
+    "tip": "Mehr Hertz bringen nur etwas, wenn PC oder Konsole genug Bilder liefern. Aktuelle Konsolen schaffen meist bis 120 Hz.",
+    "suche": "Gaming Monitor 144Hz"
+   }
+  ]
+ },
+ {
+  "id": "smart-home",
+  "titel": "5 Smart-Home-Gadgets für Einsteiger",
+  "chip": "Smart Home",
+  "termin": "2026-11-22T11:30",
+  "plaetze": [
+   {
+    "p": 5,
+    "name": "Smarte Steckdose",
+    "why": "Macht jedes Gerät per App oder Sprache steuerbar. Ideal für Lampen.",
+    "tip": "Auf die maximale Last achten und darauf, ob sie mit Alexa, Google oder Apple Home funktioniert.",
+    "suche": "smarte Steckdose WLAN Alexa"
+   },
+   {
+    "p": 4,
+    "name": "Smarte Glühbirne",
+    "why": "Helligkeit und Farbe per App, abends automatisch gedimmt.",
+    "tip": "Gewinde prüfen (E27 oder E14). Modelle mit WLAN brauchen keine zusätzliche Zentrale (Bridge).",
+    "suche": "smarte Glühbirne E27 WLAN"
+   },
+   {
+    "p": 3,
+    "name": "Smarter Lautsprecher",
+    "why": "Musik, Wetter, Timer, und er steuert die anderen Geräte per Stimme.",
+    "tip": "Zuerst das System festlegen: Alexa, Google oder Apple. Danach alle Geräte passend dazu kaufen.",
+    "suche": "smarter Lautsprecher Sprachassistent"
+   },
+   {
+    "p": 2,
+    "name": "Video-Türklingel",
+    "why": "Du siehst am Handy, wer vor der Tür steht, auch unterwegs.",
+    "tip": "Klären, ob Akku oder Kabel. Die Kamera darf nur deinen eigenen Bereich erfassen, in Mehrparteienhäusern vorher die Hausverwaltung fragen.",
+    "suche": "Video Türklingel WLAN"
+   },
+   {
+    "p": 1,
+    "name": "Saugroboter",
+    "why": "Saugt, während du unterwegs bist. Am Abend ist der Boden sauber.",
+    "tip": "Mit Laser-Navigation (LiDAR) fährt er gezielt statt zufällig. Eine Absaugstation spart das tägliche Leeren.",
+    "suche": "Saugroboter Laser Navigation"
+   }
+  ]
+ },
+ {
+  "id": "handy-zubehoer",
+  "titel": "5 Handy-Gadgets, die sich wirklich lohnen",
+  "chip": "Handy-Zubehör",
+  "termin": "2026-11-23T17:30",
+  "plaetze": [
+   {
+    "p": 5,
+    "name": "Displayschutz aus Panzerglas",
+    "why": "Ein Sturz, und nur das Schutzglas ist kaputt statt des Displays.",
+    "tip": "Genau für dein Handymodell kaufen. Sets mit Anbringrahmen machen es blasenfrei.",
+    "suche": "Panzerglas Displayschutz"
+   },
+   {
+    "p": 4,
+    "name": "Robuste Handyhülle",
+    "why": "Schützt Ecken und Kamera, die häufigsten Bruchstellen.",
+    "tip": "Ein erhöhter Rand um Kamera und Display schützt beim Ablegen auf dem Tisch.",
+    "suche": "Handyhülle stoßfest"
+   },
+   {
+    "p": 3,
+    "name": "Kabelloses Ladegerät",
+    "why": "Handy drauflegen, fertig. Kein Kabelsuchen mehr am Nachttisch.",
+    "tip": "Prüfen, ob dein Handy kabelloses Laden (Qi) unterstützt. Die meisten neueren Modelle können es.",
+    "suche": "kabelloses Ladegerät Qi"
+   },
+   {
+    "p": 2,
+    "name": "Handy-Stativ",
+    "why": "Für Fotos, Videos und Videocalls ohne wackelnde Hand.",
+    "tip": "Mit Bluetooth-Fernauslöser machst du Gruppenfotos, auf denen niemand fehlt.",
+    "suche": "Handy Stativ Fernauslöser"
+   },
+   {
+    "p": 1,
+    "name": "Handy-Gimbal",
+    "why": "Stabilisiert jede Bewegung. Deine Videos sehen aus wie vom Profi.",
+    "tip": "Auf das maximale Gewicht achten: Große Handys mit Hülle sind schwerer, als man denkt.",
+    "suche": "Smartphone Gimbal"
+   }
+  ]
+ },
+ {
+  "id": "haustiere",
+  "titel": "5 Tech-Gadgets für Haustier-Besitzer",
+  "chip": "Haustiere",
+  "termin": "2026-11-24T17:30",
+  "plaetze": [
+   {
+    "p": 5,
+    "name": "Automatisches Laserspielzeug",
+    "why": "Beschäftigt die Katze, auch wenn du gerade keine Zeit hast.",
+    "tip": "Nie in die Augen leuchten lassen. Nach dem Spiel ein echtes Spielzeug zum Fangen geben, das beugt Frust vor.",
+    "suche": "automatisches Katzenspielzeug Laser"
+   },
+   {
+    "p": 4,
+    "name": "Trinkbrunnen",
+    "why": "Fließendes Wasser regt viele Katzen zum Trinken an.",
+    "tip": "Eine leise Pumpe und leicht zu reinigende Teile sind wichtiger als viele Extras.",
+    "suche": "Katzen Trinkbrunnen leise"
+   },
+   {
+    "p": 3,
+    "name": "Futterautomat",
+    "why": "Füttert pünktlich, auch wenn du länger arbeitest.",
+    "tip": "Auf Zeitplan und feste Portionen achten. Für Nassfutter gibt es gekühlte Modelle.",
+    "suche": "Futterautomat Katze Hund"
+   },
+   {
+    "p": 2,
+    "name": "Akku-Handstaubsauger",
+    "why": "Tierhaare vom Sofa sind in Sekunden weg.",
+    "tip": "Eine Tierhaar-Bürste mit Gummilamellen holt Haare deutlich besser aus Polstern.",
+    "suche": "Akku Handstaubsauger Tierhaare"
+   },
+   {
+    "p": 1,
+    "name": "Haustierkamera",
+    "why": "Am Handy sehen, was dein Liebling macht. Manche Modelle werfen sogar Leckerlis.",
+    "tip": "Mit Zwei-Wege-Audio kannst du mit deinem Tier sprechen. Auf Nachtsicht achten.",
+    "suche": "Haustierkamera Leckerli"
+   }
+  ]
+ }
+];
+/* RANKINGS-ENDE */
+
+/* Nur bereits veroeffentlichte Rankings zeigen, das neueste oben */
+const jetzt = new Date();
+const RANKINGS = ALLE.filter(r => new Date(r.termin) <= jetzt)
+  .sort((a, b) => new Date(a.termin) - new Date(b.termin))
+  .map((r, i) => Object.assign({}, r, {nr: i + 1}))
+  .reverse();
+if (RANKINGS.length) RANKINGS[0].neu = true;
+
+/* ===== Aufbau der Seite ===== */
+const esc = s => s.replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const link = q => "https://www.amazon.de/s?k=" + encodeURIComponent(q) + "&tag=" + TAG;
+
+document.getElementById("chips").innerHTML = RANKINGS.map(r =>
+  `<a class="chip" href="#${r.id}">${esc(r.chip)}</a>`).join("");
+
+document.getElementById("rankings").innerHTML = RANKINGS.length ? RANKINGS.map(r => `
+  <section id="${r.id}">
+    <div class="r-head">${r.neu ? '<span class="neu">Neu</span>' : ''}<span class="nr">Ranking #${r.nr}</span></div>
+    <h2>${esc(r.titel)}</h2>
+    <ol class="list">
+      ${[...r.plaetze].sort((a,b)=>a.p-b.p).map(x => `
+      <li class="item p${x.p}">
+        <div class="row">
+          <div class="badge" aria-label="Platz ${x.p}">${x.p}</div>
+          <div><div class="name">${esc(x.name)}</div><div class="why">${esc(x.why)}</div></div>
+        </div>
+        <p class="tip"><b>Worauf achten:</b> ${esc(x.tip)}</p>
+        <a class="btn" href="${link(x.suche)}" target="_blank" rel="sponsored nofollow noopener">Auf Amazon ansehen&nbsp;→</a>
+      </li>`).join("")}
+    </ol>
+  </section>`).join("") : '<p class="claim" style="padding:40px 0;text-align:center">Das erste Ranking erscheint in Kürze.</p>';
+</script>
+</body>
+</html>
